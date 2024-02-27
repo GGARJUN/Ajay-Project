@@ -37,7 +37,7 @@ export function DashboardNav() {
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <h1 className="text-base font-semibold py-2 px-7 rounded-md hover:bg-green-600">
+          <h1 className="text-base font-semibold py-2 px-7 rounded-md cursor-pointer hover:bg-green-600">
             Our Futures
           </h1>
         </DropdownMenuTrigger>
@@ -46,9 +46,13 @@ export function DashboardNav() {
             <Link href="/blogs">
               <DropdownMenuItem>Blog</DropdownMenuItem>
             </Link>
-            <DropdownMenuItem>Blog Details</DropdownMenuItem>
-            <DropdownMenuItem>Settings</DropdownMenuItem>
-            <DropdownMenuItem>Keyboard </DropdownMenuItem>
+            <Link href="/videos">
+              <DropdownMenuItem>YouTube Videos</DropdownMenuItem>
+            </Link>
+            <Link href="/shopping">
+              <DropdownMenuItem>Shopping</DropdownMenuItem>
+            </Link>
+
           </DropdownMenuGroup>
         </DropdownMenuContent>
       </DropdownMenu>

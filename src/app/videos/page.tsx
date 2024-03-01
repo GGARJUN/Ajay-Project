@@ -1,51 +1,33 @@
 "use client";
 import * as React from "react";
-import Autoplay from "embla-carousel-autoplay";
-
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { DashboardNav } from "../dashboard/DashboardNav";
 import { FooterLast } from "../hero/FooterLast";
+import Link from "next/link";
 
 export default function page() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  );
   return (
     <>
       <DashboardNav />
       <div className="mt-20 text-center">
-        <h1>YouTube Videos</h1>
-        <Carousel
-          plugins={[plugin.current]}
-          className="w-full max-w-xs"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
-        >
-          <CarouselContent>
-            {Array.from({ length: 10 }).map((_, index) => (
-              <CarouselItem key={index}  className="pl-1 md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
-                      <span className="text-4xl font-semibold">
-                        {index + 1}
-                      </span>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+        <h1 className="font-bold text-2xl">YouTube Videos</h1>
+      </div>
+      <div className="my-20 mx-10  grid grid-cols-4 gap-14">
+        <div className=" bg-slate-300 py-5 flex flex-col items-center justify-center rounded-lg">
+          <Link href="./video1"><button className="bg-green-600 hover:bg-green-400 text-white px-9 py-3 font-semibold rounded-xl">Click</button></Link>
+          <h1 className="font-bold text-2xl mt-5">Sottu Neer Pasanam</h1>
+        </div>
+        <div className=" bg-slate-300 py-5 flex flex-col items-center justify-center rounded-lg">
+          <Link href="./video2"><button className="bg-green-600 hover:bg-green-400 text-white px-9 py-3 font-semibold rounded-xl">Click</button></Link>
+          <h1 className="font-bold text-2xl mt-5">Sottu Neer Pasanam</h1>
+        </div>
+        <div className=" bg-slate-300 py-5 flex flex-col items-center justify-center rounded-lg">
+          <Link href="./video3"><button className="bg-green-600 hover:bg-green-400 text-white px-9 py-3 font-semibold rounded-xl">Click</button></Link>
+          <h1 className="font-bold text-2xl mt-5">Sottu Neer Pasanam</h1>
+        </div>
+        <div className=" bg-slate-300 py-5 flex flex-col items-center justify-center rounded-lg">
+          <Link href="./video4"><button className="bg-green-600 hover:bg-green-400 text-white px-9 py-3 font-semibold rounded-xl">Click</button></Link>
+          <h1 className="font-bold text-2xl mt-5">Sottu Neer Pasanam</h1>
+        </div>
       </div>
       <FooterLast />
     </>

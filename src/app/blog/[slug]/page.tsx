@@ -5,6 +5,7 @@ import { PortableText } from "@portabletext/react";
 import { User } from "@nextui-org/react";
 import Image from "next/image";
 import { FooterLast } from "@/app/hero/FooterLast";
+import Link from "next/link";
 async function getData(slug: string) {
   const query = `
    *[_type == "blog" && slug.current == '${slug}'] {
@@ -27,7 +28,7 @@ export default async function BlogArticle({
 
   return (
     <>
-      <DashboardNav />
+      <DashboardNav /> 
       <h1 className="mt-[60px] py-5 bg-slate-300 text-3xl font-bold text-center w-full">
         The Blog Page
       </h1>
@@ -214,6 +215,9 @@ export default async function BlogArticle({
           </div>
         </div>
       </div>
+      <button className="mt-20 relative left-[90%] mb-10 bg-green-400 px-5 py-2 rounded-xl ">
+        <Link href="/blogs">Back</Link>
+      </button> 
       <FooterLast/>
     </>
   );

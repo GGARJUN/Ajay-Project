@@ -1,4 +1,4 @@
-import React from "react";
+
 import { DashboardNav } from "../dashboard/DashboardNav";
 import { FooterLast } from "../hero/FooterLast";
 
@@ -9,7 +9,7 @@ export default function page() {
       <div className="  absolute w-full">
         <img src="/icons/back.jpg" alt="" className="w-full " />
       </div>
-      <div className=" mt-14  py-10 relative">
+      <div className="mt-14 py-10 relative">
         <div className="">
           <h1 className="font-bold text-4xl text-center">
             MEET <span className="border-b-4 border-green-500">THE</span> TEAM
@@ -166,7 +166,6 @@ export default function page() {
           </div>
         </div>
       </div>
-      <FooterLast/>
     </>
   );
 }

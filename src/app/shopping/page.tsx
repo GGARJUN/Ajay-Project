@@ -1,16 +1,17 @@
-import React from 'react'
-import { DashboardNav } from '../dashboard/DashboardNav'
-import { FooterLast } from '../hero/FooterLast'
+"use client";
+import { DashboardNav } from "../dashboard/DashboardNav";
+import { useState } from "react";
+import Header from "./Header";
+import Cart from "./Cart";
 
-export default function page  ()  {
+
+export default function page() {
+  const [cart, setCart] = useState([]);
   return (
     <>
-        <DashboardNav/>
-        <div className='mt-20 text-center'>
-            <h1>Shopping Page</h1>
-        </div>
-        <FooterLast/>
+      <DashboardNav />
+      <Cart cart={cart} setCart={setCart} />
+      <Header cart={cart} setCart={setCart} />
     </>
-
-  )
+  );
 }
